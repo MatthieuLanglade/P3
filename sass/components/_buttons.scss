@@ -1,0 +1,12 @@
+//lien "explorer" ou "commander"
+.valider {
+    display: inline-block;
+    @include card-shadow;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient($colour-secondary,30%,$colour-primary);
+    width: auto;
+    padding: 20px 20px;
+    margin: 40px;
+    border-radius: 50px;
+    }

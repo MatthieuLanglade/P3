@@ -1,4 +1,12 @@
+// Couleurs Theme
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
-$bg-grey : #f6f6f6;
+$bg-base : #FFFFFF;
+$bg-basedr: darken($bg-base,5%);
+$bg-baseddr: darken($bg-base,10%);
+$bg-basedt: darken($bg-base,80%);
+$font-basedr : darken($bg-base,100%);
+// Fonts
+$Shrikhand: 'Shrikhand', sans-serif;
+$Roboto: 'Roboto', sans-serif; 
