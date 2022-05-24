@@ -3,10 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet P3 - Ohmyfood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/26e8cc9e1c.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood - Réservez votre menu dans votre restaurant</title>
 </head>
 <body>
-    <p>test</p>
+    <header>
+        <div id="logo">
+            <img src="/images/logo/ohmyfood.png" alt="logo-OhMyFood"/>
+        </div>
+        <div id="localisation">
+            <i></i>
+            <p>Paris, Belleville</p>
+        </div>
+        <div id="presentation-entreprise">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception</p>
+            <button id="explore">Explorer nos restaurants</button>
+        </div>
+    </header>
+    <section id="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <article class="fontionnement--step">
+            <a href="" alt="">
+                <i></i>
+                <p>Choisissez un restaurant</p>
+            </a>
+        </article>
+    </section>
+    <section id="list-restaurants">
+        <h2>Restaurants</h2>
+        <div id="cards-list">
+            <article class="card-restaurant">
+            <a href="restaurants/la-palette-du-gout.html" title="Accédez au restaurant : La palette du goût">
+                <div class="card-restaurant--image">
+                    <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="exemple assiette La Palette du goût"/>
+                </div>
+                <div class="card-restaurant--description">
+                    <h3>La palette du goût</h3>
+                    <p class="card-restaurant--description--ville">Ménilmontant</p>
+                </div>
+            </a>
+            </article>
+            <article class="card-restaurant">
+                <a href="restaurants/la-note-enchantee.html" title="Accédez au restaurant : La note enchantée">
+                    <div class="card-restaurant--image">
+                        <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="exemple assiette La note enchantée"/>
+                    </div>
+                    <div class="card-restaurant--description">
+                        <h3>La note enchantée</h3>
+                        <p class="card-restaurant--description--ville">Ménilmontant</p>
+                    </div>
+                </a>
+                </article>
+            <article class="card-restaurant">
+                <a href="restaurants/a-la-francaise.html" title="Accédez au restaurant : À la française">
+                    <div class="card-restaurant--image">
+                        <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="exemple assiette À la française"/>
+                    </div>
+                    <div class="card-restaurant--description">
+                        <h3>À la française</h3>
+                        <p class="card-restaurant--description--ville">Ménilmontant</p>
+                    </div>
+                </a>
+                </article>
+            <article class="card-restaurant">
+                <a href="restaurants/la-palette-du-gout.html" title="Accédez au restaurant : La palette du goût">
+                    <div class="card-restaurant--image">
+                        <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="exemple assiette La Palette du goût"/>
+                    </div>
+                    <div class="card-restaurant--description">
+                        <h3>La palette du goût</h3>
+                        <p class="card-restaurant--description--ville">Ménilmontant</p>
+                    </div>
+                </a>
+                </article>
+        </div>
+    </section>
+    <footer>
+        <h2>ohmyfood</h2>
+        <ul>
+            <li><a href="#" title="Proposer un nouveau restaurant">Proposer un restaurant</a></li>
+            <li><a href="#" title="Devenir notre partenaire">Devenir partenaire</a></li>
+            <li><a href="#" title="Consulter les mentions légales">Mentions légales</a></li>
+            <li><a href="mailto:contact@ohmyfood.fr" title="Nous contacter">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
