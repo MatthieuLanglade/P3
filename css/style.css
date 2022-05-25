@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 * {
@@ -31,7 +30,8 @@ body {
   font-weight: 400;
   color: white;
   background: linear-gradient(#FF79DA, 30%, #9356DC);
-  width: auto;
+  width: 60%;
+  text-align: center;
   padding: 20px 20px;
   margin: 40px;
   border-radius: 50px;
@@ -39,14 +39,16 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0;
   flex-wrap: wrap;
-  background-color: #f2f2f2;
+  position: relative;
+  background-color: #FFFFFF;
   width: 100%;
-  margin-bottom: 20px;
 }
 header #retour-accueil {
+  position: absolute;
+  width: 20%;
   align-items: center;
   padding: 10px;
 }
@@ -55,16 +57,19 @@ header #retour-accueil i {
   color: black;
 }
 header #logo {
+  margin: auto;
   padding: 10px 0px;
-  width: 100%;
+  width: 80%;
   height: auto;
-  background-color: #FFFFFF;
 }
 header #logo img {
   object-fit: scale-down;
   height: 30px;
 }
-header #localisation {
+header #resume-action {
+  background-color: #f2f2f2;
+}
+header #resume-action #localisation {
   display: flex;
   flex-direction: row;
   gap: 0;
@@ -73,16 +78,16 @@ header #localisation {
   background-color: #e6e6e6;
   box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.2);
 }
-header #localisation * {
+header #resume-action #localisation * {
   font-weight: bold;
   width: auto;
   padding: 15px;
   color: #333333;
 }
-header #presentation-entreprise {
+header #resume-action #presentation-entreprise {
   text-align: center;
 }
-header #presentation-entreprise h1 {
+header #resume-action #presentation-entreprise h1 {
   padding: 10px;
 }
 
@@ -214,6 +219,102 @@ footer ul li i {
   font-size: 1.3em;
 }
 
-/* Ci-dessous CSS provisoire à catégoriser une fois terminé */
+.presentation-restaurant {
+  height: 200px;
+  width: 100%;
+}
+.presentation-restaurant img {
+  height: 100%;
+  object-fit: cover;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+  top: -25px;
+  margin-bottom: -25px;
+  background-color: #e6e6e6;
+  padding: 15px;
+}
+#menu--titre {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 0px;
+}
+#menu--titre h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  width: 80%;
+}
+#menu--titre i {
+  width: 20%;
+  text-align: center;
+  font-size: 1.7em;
+}
+#menu section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-plat {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  width: 100%;
+}
+.card-plat--texte {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 15px;
+  width: 100%;
+}
+.card-plat--texte h3 {
+  width: 100%;
+}
+.card-plat--texte--description {
+  width: 85%;
+  font-size: 1em;
+}
+.card-plat--texte--prix {
+  width: calc(15% - 10px);
+  text-align: right;
+  font-weight: bold;
+}
+.card-plat--valider {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 0%;
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  font-size: 1.5em;
+}
+.card-plat:hover .card-plat--texte, .card-plat:active .card-plat--texte {
+  width: 80%;
+}
+.card-plat:hover .card-plat--valider, .card-plat:active .card-plat--valider {
+  width: 20%;
+}
+
+.commander {
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
