@@ -1,10 +1,9 @@
 header {
-    display: flex;
-    flex-wrap:wrap;
+    @include flex-column(0);
     background-color: $bg-basedr;
-    vertical-align: middle;
     width: 100%;
     margin-bottom: 20px;
+    // A finir sur passage en page
     #retour-accueil {
         align-items: center;
         padding: 10px;
@@ -23,22 +22,22 @@ header {
             height: 30px;
         }
     }
-    #localisation {     
-        display: flex;
+    #localisation {
+        @include flex-row(0);
         justify-content:center;
-        align-items: center;
         background-color: $bg-baseddr;
-        box-shadow: inset 0px 8px 8px -8px rgba(0,0,0,0.20);
-        padding: 5px 0px;
+        box-shadow: inset 0px 8px 8px -8px rgba(0,0,0,0.20); // Shadow intérieure
         * {
             font-weight: bold;
             width: auto; 
-            padding: 10px;
+            padding: 15px;
             color: $bg-basedt;
         }
     }
     #presentation-entreprise {
         text-align: center;
+        h1 {
+            padding: 10px;
+        }
     }
-    
 }

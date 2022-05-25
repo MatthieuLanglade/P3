@@ -29,15 +29,18 @@
         <h2>Fonctionnement</h2>
         <div id="fonctionnement--list">
             <article class="fontionnement--list--step">
-                    <i></i>
+                    <div class="numerotation"><p>1</p></div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                     <h3>Choisissez un restaurant</h3>
             </article>
             <article class="fontionnement--list--step">
-                    <i></i>
+                <div class="numerotation"><p>2</p></div>
+                    <i class="fa-solid fa-list"></i>
                     <h3>Composez votre menu</h3>
             </article>
             <article class="fontionnement--list--step">
-                    <i></i>
+                <div class="numerotation"><p>3</p></div>
+                    <i class="fa-solid fa-store"></i>
                     <h3>Dégustez au restaurant</h3>
             </article>
         </div>
@@ -45,57 +48,97 @@
     <section id="list-restaurants">
         <h2>Restaurants</h2>
         <div id="cards-list">
-            <article class="card-restaurant">
+            <article class="resultat-restaurant">
+            <div class="card-restaurant">
             <a href="restaurants/la-palette-du-gout.html" title="Accédez au restaurant : La palette du goût">
+                <div class="card-restaurant--nouveau--actif">
+                    Nouveau
+                </div>
                 <div class="card-restaurant--image">
                     <img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="exemple assiette La Palette du goût"/>
                 </div>
                 <div class="card-restaurant--description">
-                    <h3>La palette du goût</h3>
-                    <p class="card-restaurant--description--ville">Ménilmontant</p>
-                </div>
-            </a>
-            </article>
-            <article class="card-restaurant">
-                <a href="restaurants/la-note-enchantee.html" title="Accédez au restaurant : La note enchantée">
-                    <div class="card-restaurant--image">
-                        <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="exemple assiette La note enchantée"/>
-                    </div>
-                    <div class="card-restaurant--description">
-                        <h3>La note enchantée</h3>
+                    <div class="card-restaurant--description--nom">
+                        <h3>La palette du goût</h3>
                         <p class="card-restaurant--description--ville">Ménilmontant</p>
                     </div>
+                    <div class="card-restaurant--description--favoris">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </a>
+            </div>
+            </article>
+            <article class="resultat-restaurant">
+            <div class="card-restaurant">
+                <a href="restaurants/la-note-enchantee.html" title="Accédez au restaurant : La note enchantée">
+                    <div class="card-restaurant--nouveau--actif">
+                        Nouveau
+                    </div>
+                    <div class="card-restaurant--image">
+                        <img src="/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="exemple assiette La Palette du goût"/>
+                    </div>
+                    <div class="card-restaurant--description">
+                        <div class="card-restaurant--description--nom">
+                            <h3>La note enchantée</h3>
+                            <p class="card-restaurant--description--ville">Ménilmontant</p>
+                        </div>
+                        <div class="card-restaurant--description--favoris">
+                           <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
                 </a>
+            </div>
                 </article>
-            <article class="card-restaurant">
+            <article class="resultat-restaurant">
+                <div class="card-restaurant">
                 <a href="restaurants/a-la-francaise.html" title="Accédez au restaurant : À la française">
+                    <div class="card-restaurant--nouveau">
+                        Nouveau
+                    </div>
                     <div class="card-restaurant--image">
                         <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="exemple assiette À la française"/>
                     </div>
                     <div class="card-restaurant--description">
-                        <h3>À la française</h3>
-                        <p class="card-restaurant--description--ville">Ménilmontant</p>
+                        <div class="card-restaurant--description--nom">
+                            <h3>À la française</h3>
+                            <p class="card-restaurant--description--ville">Ménilmontant</p>
+                        </div>
+                        <div class="card-restaurant--description--favoris">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                 </a>
+                </div>
                 </article>
-            <article class="card-restaurant">
+            <article class="resultat-restaurant">
+                <div class="card-restaurant">
                 <a href="restaurants/la-palette-du-gout.html" title="Accédez au restaurant : La palette du goût">
+                    <div class="card-restaurant--nouveau">
+                        Nouveau
+                    </div>
                     <div class="card-restaurant--image">
                         <img src="/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="exemple assiette La Palette du goût"/>
                     </div>
                     <div class="card-restaurant--description">
-                        <h3>La palette du goût</h3>
-                        <p class="card-restaurant--description--ville">Ménilmontant</p>
+                        <div class="card-restaurant--description--nom">
+                            <h3>La palette du goût</h3>
+                            <p class="card-restaurant--description--ville">Ménilmontant</p>
+                        </div>
+                        <div class="card-restaurant--description--favoris">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
                 </a>
+                </div>
                 </article>
         </div>
     </section>
     <footer>
         <h2>ohmyfood</h2>
         <ul>
-            <li class="lien-en-avant"><a href="#" title="Proposer un nouveau restaurant">Proposer un restaurant</a></li>
-            <li class="lien-en-avant"><a href="#" title="Devenir notre partenaire">Devenir partenaire</a></li>
+            <li class="lien-en-avant"><a href="#" title="Proposer un nouveau restaurant"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+            <li class="lien-en-avant"><a href="#" title="Devenir notre partenaire"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
             <li><a href="#" title="Consulter les mentions légales">Mentions légales</a></li>
             <li><a href="mailto:contact@ohmyfood.fr" title="Nous contacter">Contact</a></li>
         </ul>

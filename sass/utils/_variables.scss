@@ -2,11 +2,20 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
+    // Possibilité d'adapter bg-base pour theme sombre, couleur de police à revoir
 $bg-base : #FFFFFF;
 $bg-basedr: darken($bg-base,5%);
 $bg-baseddr: darken($bg-base,10%);
+$bg-baseddt: darken($bg-base,50%);
 $bg-basedt: darken($bg-base,80%);
 $font-basedr : darken($bg-base,100%);
+// Display flex 
+$flex-gap : 20px;
 // Fonts
 $Shrikhand: 'Shrikhand', sans-serif;
 $Roboto: 'Roboto', sans-serif; 
+// Fonctionnement
+$padding-fonctionnement: 30px;
+$taille-numerotation: 30px;
+// Cards
+$height-card : 250px;

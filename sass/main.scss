@@ -13,17 +13,3 @@
 
 
 /* Ci-dessous CSS provisoire à catégoriser une fois terminé */ 
-#list-restaurants {
-    background-color: $bg-basedr;
-    padding: 30px 20px;
-}.card-restaurant {
-    &--image img {
-        object-fit: cover;
-        width: 100%;
-        height: 250px;
-        
-    }
-    &--description {
-        background-color: white;
-    }
-}

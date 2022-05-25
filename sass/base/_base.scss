@@ -6,13 +6,13 @@
 }
 h1, h2, h3, p, a, button {
     font-family: $Roboto;
-    color: black;
+    color: $font-basedr;
     text-decoration: none;    
     font-size: 1.1em;
+    width: auto;
 }
 h1, h2 {
     font-size: 1.5em;
-    padding: 10px;
     width: auto;
 }
 body {

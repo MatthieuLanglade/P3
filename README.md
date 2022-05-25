@@ -10,3 +10,10 @@ Déclaration des styles globaux
 Mise en forme header + footer.
 Mise en forme sur la structure pour de la lisibilité.
 *Finition à faire sur les couleurs bg/font
+v1.0.3
+Mise en forme section Fonctionnement
+Mise en forme section Liste restaurants
+    Ajout favoris + nouveau
+Ajout icones dans footer
+Ajout des mixins flex row/column
+Hors animation & hors responsive, page d'accueil complète.

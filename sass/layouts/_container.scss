@@ -1,0 +1,93 @@
+// Fonctionnement
+#fonctionnement {
+    padding: $padding-fonctionnement;
+    h2 {
+        margin-bottom: 20px;
+    }
+    &--list {
+        article {
+            @include flex-row;
+            @include card-shadow();
+            position: relative;
+            border-radius: 25px;
+            background-color: $bg-basedr;
+            padding: 20px $padding-fonctionnement;
+            margin-bottom: 25px;
+            align-items:center ;
+            .numerotation {
+                border-radius: 50%;
+                background-color: $colour-primary;   
+                position:absolute;
+                left: - $taille-numerotation / 2 ;
+                height: $taille-numerotation;
+                width: $taille-numerotation;
+                display: flex;
+                p{
+                    text-align: center;
+                    margin: auto;
+                    color: white;
+                }
+            }
+            i {
+                width: 20px;
+                font-size: 1.2em;
+                color: $bg-baseddt;
+            }
+        }
+    }
+}
+// Liste restaurants
+#list-restaurants {
+    background-color: $bg-basedr;
+    padding: 40px 20px;
+    #cards-list {
+        @include flex-column;
+        margin: 20px 0px;
+    }
+}
+.card-restaurant {
+    @include flex-column(0);
+    @include card-shadow();  
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;  
+    height: $height-card;
+    width: 100%;
+    &--nouveau {
+        display: none;
+        &--actif {            
+            position:absolute;
+            top: 15px;
+            right: 15px;
+            padding: 7px;
+            display:block;
+            background-color: $colour-tertiary;
+            color: darken($colour-tertiary, 50%);
+            width: auto;
+        }
+    }        
+    &--image {
+        width: 100%;
+        height: $height-card*0.7;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &--description {
+        @include flex-row(0);
+        align-items: center;
+        background-color: white;
+        padding: 10px;
+        width: 100%;
+        height: $height-card*0.3;
+        &--nom {
+            width: 90%;
+        }
+        &--favoris {
+                width: 10%;
+                font-size: 1.3em;
+        }
+    }
+   
+}   

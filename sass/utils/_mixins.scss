@@ -1,3 +1,15 @@
 @mixin card-shadow {
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.40);
+}
+@mixin flex-column($gap : $flex-gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;    
+    flex-wrap: wrap;
+}
+@mixin flex-row($gap : $flex-gap) {
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+    flex-wrap: wrap;
 }
