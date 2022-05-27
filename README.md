@@ -1,18 +1,16 @@
 # P3 - OhMyFood
-# A venir:
-
-*** 
+## A venir:
 
 * Renommage des classes -- en _  
 * Loading spinner  
 * Animation #menu  
 * Refactoring/relecture SASS/CSS  
 
-#Versions 
+## Versions 
 
 ***
 
-##v1.0.5
+### v1.0.5
 
 * Modification couleur bg dans page menu ddr -> dr  
 * Début animations : + mixins ::after & :hover  
@@ -26,7 +24,7 @@
 
 ***
 
-##V1.0.4
+### V1.0.4
 
 * Mise en forme page unique "A la francaise"  
 * Mise en forme conforme maquette - hors animations & media querries   
@@ -35,7 +33,7 @@
 
 ***
 
-##V1.0.3
+### V1.0.3
 
 * Mise en forme section Fonctionnement  
 * Mise en forme section Liste restaurants  
@@ -46,7 +44,7 @@
 
 ***
 
-##V1.0.2
+### V1.0.2
 
 * Ajout des fonts & couleurs  
 * MAJ Page-menu exemple avec texte maquette.  
@@ -57,7 +55,7 @@
 
 ***
 
-##V1.0.1
+### V1.0.1
 
 * Rédaction accueil + page-menu exemple + structure header/section/footer  
 * Ajout Div avec class & id  
