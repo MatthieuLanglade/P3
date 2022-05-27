@@ -1,11 +1,28 @@
 # P3 - OhMyFood
+## Infos  
+Projet réalisé dans le cadre de la formation Développement Web par OpenClassroom [P3].  
+Page conçu en mobile first.  
+
 ## A venir:
 
 * Refactoring/relecture SASS/CSS  
-* Version Tablette & Desktop  
-* Rédaction Pages Menu supplémentaires  
+* Validation W3C  
+* Vérification animations et réglages sur liste des plats.  
 
 ## Versions 
+
+### v1.1.0
+
+* Version Tablette & Desktop  
+    -Bouton valider  
+    -Cases Fonctionnement  
+    -class recentrage-desktop, pour ne pas toucher au body et garder le bg sur toute la largeur.    
+* Modification taille bouton valider plat, avec variable.  
+* Rédaction Pages Menu supplémentaires  
+    /!\ Le restaurant "La note enchantée" a 4 entrées, ce qui implique un petit décallage sur l'animation du plat.   
+    Difficile de gérer sans récupération dynamique du nombre de plat. J'incrémente à 4, à voir.  
+
+***
 
 ### v1.0.6
 
@@ -17,7 +34,7 @@
     -ok Menu  
     -ok index  
 
-
+***
 
 ### v1.0.5
 

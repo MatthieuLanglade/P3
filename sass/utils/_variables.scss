@@ -20,6 +20,8 @@ $taille-numerotation: 30px;
 // Cards
 $height-card : 250px;
 $card-shadow: 0.4;
+// Menu
+$width-valider-plat: 60px;
 //Animations
     //Accueil
 $shake-intensity : 3%; // Bouton Nouveau
@@ -27,6 +29,11 @@ $nb-letter: 8; // Loading-spinner - Lettres logo
 $anim-delay : 3s; // Loading-spinner - Delay Fade
     //Menu    
 $nb-categorie-plat: 3;
-$nb-plat: 3;
+$nb-plat: 4;
 $delay-categorie-plat: $nb-plat * 300ms;
 $delay-plat: 300ms;
+    //Responsive
+$breakpoints: (
+    tablette : 760px,
+    desktop : 1000px,
+);

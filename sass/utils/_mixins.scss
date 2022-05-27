@@ -26,3 +26,8 @@
     left: 0;
     z-index: -1;
 }
+@mixin not-mobile {
+    @media screen and (min-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+}

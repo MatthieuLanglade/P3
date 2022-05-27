@@ -52,7 +52,7 @@
 }
 @keyframes slide-right {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-20%);
         opacity:0; 
     }
 }
@@ -80,6 +80,7 @@
         position: relative;
         padding: 15px;
         width: 100%;
+        transition: width 400ms ease-in-out;
         h3 {
             width: 100%;
         }
@@ -117,10 +118,10 @@
    }
    &:hover, &:active {
         .card-plat_texte {
-            width: 80%;
+            width: calc(100% - $width-valider-plat);
         }
         .card-plat_valider {
-            width: 20%;
+            width: $width-valider-plat;
             transform: scaleX(1);
             i {
                 transform: rotate(0);
