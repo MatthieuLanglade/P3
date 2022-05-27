@@ -8,7 +8,7 @@
         article {
             @include flex-row;
             @include card-shadow();
-            position: relative;
+            @include pseudo-btn;
             border-radius: 25px;
             background-color: $bg-basedr;
             padding: 20px $padding-fonctionnement;
@@ -32,6 +32,22 @@
                 width: 20px;
                 font-size: 1.2em;
                 color: $bg-baseddt;
+            }
+            &:hover {
+                &::after {
+                    transform: scale(1) right;
+                    opacity: 1;
+                }
+                i  {
+                    color: $colour-primary;
+                }
+            }
+            &::after {
+                @include pseudo-after;
+                border-radius: 25px;
+                background-color: lighten($colour-primary,35);
+                opacity: 0;
+                transition: all 300ms;                
             }
         }
     }
@@ -84,10 +100,10 @@
         &--nom {
             width: 90%;
         }
-        &--favoris {
-                width: 10%;
-                font-size: 1.3em;
-        }
+    &--favoris {
+        width: 10%;
+        height: 100%;
+        font-size: 1.3em;
     }
-   
-}   
+    }
+} 

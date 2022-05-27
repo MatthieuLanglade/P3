@@ -27,6 +27,8 @@ body {
 .valider {
   display: inline-block;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
   font-weight: 400;
   color: white;
   background: linear-gradient(#FF79DA, 30%, #9356DC);
@@ -35,6 +37,48 @@ body {
   padding: 20px 20px;
   margin: 40px;
   border-radius: 50px;
+}
+.valider:hover::after {
+  opacity: 1;
+}
+.valider::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: 300ms;
+}
+
+.favoris {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.favoris i {
+  position: absolute;
+  width: auto;
+}
+.favoris i:nth-child(2) {
+  opacity: 0;
+  background-color: #9356DC;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: all 300ms;
+}
+.favoris i:hover:nth-child(2), .favoris i:active:nth-child(2) {
+  opacity: 1;
 }
 
 header {
@@ -109,11 +153,17 @@ footer ul {
 }
 footer ul li {
   padding-bottom: 7px;
+  transform: scale(1);
+  transform-origin: left;
+  transition: all 300ms ease;
 }
 footer ul li i {
   font-size: 0.8em;
   display: inline;
   width: 30px;
+}
+footer ul li:hover {
+  transform: scale(1.1);
 }
 
 #fonctionnement {
@@ -129,6 +179,7 @@ footer ul li i {
   flex-wrap: wrap;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
   position: relative;
+  z-index: 1;
   border-radius: 25px;
   background-color: #f2f2f2;
   padding: 20px 30px;
@@ -153,6 +204,26 @@ footer ul li i {
   width: 20px;
   font-size: 1.2em;
   color: gray;
+}
+#fonctionnement--list article:hover::after {
+  transform: scale(1) right;
+  opacity: 1;
+}
+#fonctionnement--list article:hover i {
+  color: #9356DC;
+}
+#fonctionnement--list article::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 25px;
+  background-color: #f2eafb;
+  opacity: 0;
+  transition: all 300ms;
 }
 
 #list-restaurants {
@@ -216,6 +287,7 @@ footer ul li i {
 }
 .card-restaurant--description--favoris {
   width: 10%;
+  height: 100%;
   font-size: 1.3em;
 }
 
@@ -237,7 +309,7 @@ footer ul li i {
   position: relative;
   top: -25px;
   margin-bottom: -25px;
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   padding: 15px;
 }
 #menu--titre {
@@ -254,7 +326,7 @@ footer ul li i {
   font-size: 2em;
   width: 80%;
 }
-#menu--titre i {
+#menu--titre .menu_favoris {
   width: 20%;
   text-align: center;
   font-size: 1.7em;
@@ -272,6 +344,7 @@ footer ul li i {
   gap: 0;
   flex-wrap: wrap;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  flex-wrap: nowrap;
   border-radius: 20px;
   overflow: hidden;
   background-color: #FFFFFF;
@@ -282,13 +355,18 @@ footer ul li i {
   flex-direction: row;
   gap: 10px;
   flex-wrap: wrap;
+  position: relative;
   padding: 15px;
   width: 100%;
+  transition: width 400ms ease-in-out;
 }
 .card-plat--texte h3 {
   width: 100%;
 }
 .card-plat--texte--description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: 85%;
   font-size: 1em;
 }
@@ -305,12 +383,24 @@ footer ul li i {
   background-color: #99E2D0;
   color: #FFFFFF;
   font-size: 1.5em;
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+  transform-origin: right;
+}
+.card-plat--valider i {
+  transform: rotate(-1turn);
+  transition: transform 600ms ease-in-out;
 }
 .card-plat:hover .card-plat--texte, .card-plat:active .card-plat--texte {
   width: 80%;
 }
 .card-plat:hover .card-plat--valider, .card-plat:active .card-plat--valider {
   width: 20%;
+  transform: scaleX(1);
+}
+.card-plat:hover .card-plat--valider i, .card-plat:active .card-plat--valider i {
+  transform: rotate(0);
 }
 
 .commander {

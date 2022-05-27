@@ -1,4 +1,20 @@
 # P3 - OhMyFood
+A venir: 
+-Renommage des classes -- en _
+-loading spinner
+-animation #menu
+-refactoring/relecture SASS/CSS
+
+v1.0.5
+Modification couleur bg dans page menu ddr -> dr
+Début animations : + mixins ::after & :hover
+-Fonctionnement
+-Bouton valider
+-Div Card-plat--valider (avec width, à confirmer)
+-Bouton favoris + ajustement position/dimensions
+    -le CSS class favoris est passée en section _buttons pour gestion sur accueil + menu
+-hover sur lien footer 
+
 V1.0.4
 Mise en forme page unique "A la francaise"
 Mise en forme conforme maquette - hors animations & media querries 

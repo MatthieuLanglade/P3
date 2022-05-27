@@ -12,7 +12,7 @@
     position: relative;   
     top: -25px;
     margin-bottom: -25px;
-    background-color: $bg-baseddr;
+    background-color: $bg-basedr;
     padding: 15px;
     &--titre {
         @include flex-row(0);
@@ -24,7 +24,7 @@
             font-size: 2em;
             width: 80%
         }
-        i{
+        .menu_favoris{
             width: 20%;
             text-align: center;
             font-size: 1.7em;
@@ -37,18 +37,24 @@
 .card-plat {
     @include flex-row(0);
     @include card-shadow;
+    flex-wrap: nowrap;
     border-radius: 20px;
     overflow: hidden;
     background-color: $bg-base;
     width: 100%;
     &--texte {
         @include flex-row(10px);
+        position: relative;
         padding: 15px;
         width: 100%;
+        transition: width 400ms ease-in-out;
         h3 {
             width: 100%;
         }
         &--description {
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             width: 85%;
             font-size: 1em;
         }
@@ -66,6 +72,16 @@
        background-color: $colour-tertiary;
        color: $bg-base;
        font-size: 1.5em;
+       transform: scaleX(0) ;
+       transition: transform 400ms ease-in-out;
+       
+       transition: width 400ms ease-in-out;
+       transform-origin: right;
+       i {
+           transform: rotate(-1turn);
+           transition: transform 600ms ease-in-out;
+       }
+
    }
    &:hover, &:active {
         .card-plat--texte {
@@ -73,6 +89,10 @@
         }
         .card-plat--valider {
             width: 20%;
+            transform: scaleX(1);
+            i {
+                transform: rotate(0);
+            }
         }       
     }
 }

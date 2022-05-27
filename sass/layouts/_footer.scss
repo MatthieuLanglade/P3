@@ -14,10 +14,16 @@ footer {
         padding-top: 20px;
         li {
             padding-bottom: 7px;
+            transform: scale(1);                            
+            transform-origin: left;
+            transition: all 300ms ease;
             i {
                 font-size: 0.8em;
                 display: inline;
                 width: 30px;
+            }
+            &:hover {
+                transform: scale(1.1);      
             }
         }
     }
