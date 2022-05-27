@@ -4,7 +4,7 @@
     h2 {
         margin-bottom: 20px;
     }
-    &--list {
+    &_list {
         article {
             @include flex-row;
             @include card-shadow();
@@ -61,17 +61,50 @@
         margin: 20px 0px;
     }
 }
+@keyframes agrandir {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1.05)
+    }
+}
+@keyframes shake {
+    25% {
+        transform: translateY($shake-intensity);
+    }
+    75% {
+        transform: translateY($shake-intensity * -1);   
+    }
+}
 .card-restaurant {
     @include flex-column(0);
-    @include card-shadow();  
+    @include card-shadow();
     position: relative;
     border-radius: 25px;
     overflow: hidden;  
     height: $height-card;
     width: 100%;
-    &--nouveau {
+    &:hover {
+        animation: agrandir 300ms ease-in-out forwards;
+        .card-restaurant_nouveau--actif {
+            animation: shake 200ms ease-in-out;
+            animation-iteration-count: 2;
+            &::after {
+                opacity: 0.4;
+            }
+        }
+        .card-restaurant_description::after{
+            opacity: 1;
+        }
+            }
+    &_nouveau {
         display: none;
-        &--actif {            
+        &--actif {          
+            @include pseudo-btn;  
             position:absolute;
             top: 15px;
             right: 15px;
@@ -80,9 +113,14 @@
             background-color: $colour-tertiary;
             color: darken($colour-tertiary, 50%);
             width: auto;
+            &::after {
+                @include pseudo-after;
+                background-color: white;
+                opacity: 0;                
+            }
         }
     }        
-    &--image {
+    &_image {
         width: 100%;
         height: $height-card*0.7;
         img {
@@ -90,17 +128,23 @@
             object-fit: cover;
         }
     }
-    &--description {
+    &_description {
         @include flex-row(0);
+        @include pseudo-btn;
         align-items: center;
         background-color: white;
         padding: 10px;
         width: 100%;
         height: $height-card*0.3;
-        &--nom {
+        &::after {
+            @include pseudo-after;
+            background-color: lighten($colour-primary,35);
+            opacity: 0;                
+        }
+        &_nom {
             width: 90%;
         }
-    &--favoris {
+    &_favoris {
         width: 10%;
         height: 100%;
         font-size: 1.3em;

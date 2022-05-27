@@ -1,14 +1,23 @@
 # P3 - OhMyFood
 ## A venir:
 
-* Renommage des classes -- en _  
-* Loading spinner  
-* Animation #menu  
 * Refactoring/relecture SASS/CSS  
+* Version Tablette & Desktop  
+* Rédaction Pages Menu supplémentaires  
 
 ## Versions 
 
-***
+### v1.0.6
+
+* Rajout proriété pointer sur favoris  
+* Animations Loading spinner  
+/!\ Enlever commentaire dans HTML pour visualiser.  
+* Animation #menu  - Paramètrable selon Nb Plat & Nb catégories de plat  
+* Renommage des classes -- en _  
+    -ok Menu  
+    -ok index  
+
+
 
 ### v1.0.5
 
@@ -24,7 +33,7 @@
 
 ***
 
-### V1.0.4
+### v1.0.4
 
 * Mise en forme page unique "A la francaise"  
 * Mise en forme conforme maquette - hors animations & media querries   
@@ -33,7 +42,7 @@
 
 ***
 
-### V1.0.3
+### v1.0.3
 
 * Mise en forme section Fonctionnement  
 * Mise en forme section Liste restaurants  
@@ -44,7 +53,7 @@
 
 ***
 
-### V1.0.2
+### v1.0.2
 
 * Ajout des fonts & couleurs  
 * MAJ Page-menu exemple avec texte maquette.  
@@ -55,8 +64,10 @@
 
 ***
 
-### V1.0.1
+### v1.0.1
 
 * Rédaction accueil + page-menu exemple + structure header/section/footer  
 * Ajout Div avec class & id  
 * Implementation SASS avec structure 7.1  
+
+***
