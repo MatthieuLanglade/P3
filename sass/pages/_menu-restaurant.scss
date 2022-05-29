@@ -1,18 +1,34 @@
 .presentation-restaurant {
-    height: 200px;
+    position: fixed;
+    height: 50%;
     width: 100%;   
+    z-index: -1;
     img {
+        top:-40%;
         height: 100%;
+        position: relative;
         object-fit: cover;
     } 
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(rgba(255, 255, 255, 0) 200px,rgba(255, 255, 255, 1) 50%);
+    }
+    
 }
 
 #menu {
     @include flex-column;
     border-radius: 30px 30px 0px 0px;
     position: relative;   
-    top: -25px;
-    margin-bottom: -25px;
+    top: $debordement-menu;
+    margin-bottom: $debordement-menu;
+    @include desktop-only {
+        margin-bottom: $debordement-menu + 40px;
+        border-radius: 30px;
+    }
     background-color: $bg-basedr;
     padding: 15px;
     &_titre {
@@ -22,29 +38,38 @@
         h1 {
             font-family: $Shrikhand;
             font-weight: 400;
-            font-size: 2em;
+            font-size: $taille-titre-menu;
             width: 80%
         }
     }
     &_favoris{
             width: 20%;
             text-align: center;
-            font-size: 1.7em;
+            font-size: $taille-ico;
         }      
     section {
         @include flex-column;
     } 
-     
+    h2 {
+        @include pseudo-btn;
+        padding-bottom: 5px;
+        font-weight: 300;
+        &::after {
+            @include pseudo-after;
+            width: map-get($titre-menu, width);
+            border-bottom: solid map-get($titre-menu, thick) map-get($titre-menu, color);
+        }
+    }
     @for $i from 1 to $nb-categorie-plat + 1{
         section:nth-of-type(#{$i}) {
             h2 {
-                animation: slide-right 1000ms ease-in-out backwards;
+                animation: slide-right 300ms ease-in-out backwards;
                 animation-delay: $delay-categorie-plat * ($i - 1);
             }
             @for $j from 1 to $nb-plat + 1 {
                 article:nth-of-type(#{$j}) {
                     animation: slide-fade-in 1000ms ease-in-out backwards;
-                    animation-delay: $delay-plat * ($j - 1) + $delay-categorie-plat* ($i);
+                    animation-delay: $delay-plat * ($j - 1) + $delay-categorie-plat* ($i - 1);
                 }
             }
         }
@@ -52,8 +77,12 @@
 }
 @keyframes slide-right {
     0% {
-        transform: translateX(-20%);
+        transform: translateY(30%);
         opacity:0; 
+    }
+    80% {
+        transform: translateY(-20%);
+        opacity: 1;
     }
 }
 
@@ -70,7 +99,6 @@
 .card-plat {
     @include flex-row(0);
     @include card-shadow;
-    flex-wrap: nowrap;
     border-radius: 20px;
     overflow: hidden;
     background-color: $bg-base;
@@ -83,13 +111,11 @@
         transition: width 400ms ease-in-out;
         h3 {
             width: 100%;
+            @include ellipsis;
         }
         &--description {
-            white-space:nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
             width: 85%;
-            font-size: 1em;
+            @include ellipsis;
         }
         &--prix{
             width: calc(15% - 10px);
@@ -104,7 +130,7 @@
        width: 0%;
        background-color: $colour-tertiary;
        color: $bg-base;
-       font-size: 1.5em;
+       font-size: $taille-ico;
        transform: scaleX(0) ;
        transition: transform 400ms ease-in-out;
        

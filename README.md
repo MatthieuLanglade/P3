@@ -1,22 +1,36 @@
-# P3 - OhMyFood
+ # P3 - OhMyFood
 ## Infos  
 Projet réalisé dans le cadre de la formation Développement Web par OpenClassroom [P3].  
 Page conçu en mobile first.  
 
-## A venir:
-
-* Refactoring/relecture SASS/CSS  
-* Validation W3C  
-* Vérification animations et réglages sur liste des plats.  
-
 ## Versions 
+
+### v1.1.1
+
+* animation flêche retour arriere menu.  
+* Mise en forme titre h2 page menu.  
+    - Modification police + rajout bordure paramétrable + majuscules.  
+* Gestion des titres de plats trop longs.  
+    - création mixin ellipsis
+* Vérification animations et réglages sur liste des plats.  
+    - Modification et réglages durée/sens. +fluide  
+* Validation W3C  
+    - index ok  
+    - Menu modification title/alt pour a/img  
+* Ajout hidden sur loading spinner  
+* Modififaction animation Favoris  
+* Modification version desktop & gestion image assiete exemple.  
+* Refactoring/relecture SASS/CSS  
+* Run Autoprefixer  
+
+*** 
 
 ### v1.1.0
 
 * Version Tablette & Desktop  
-    -Bouton valider  
-    -Cases Fonctionnement  
-    -class recentrage-desktop, pour ne pas toucher au body et garder le bg sur toute la largeur.    
+    - Bouton valider  
+    - Cases Fonctionnement  
+    - class recentrage-desktop, pour ne pas toucher au body et garder le bg sur toute la largeur.    
 * Modification taille bouton valider plat, avec variable.  
 * Rédaction Pages Menu supplémentaires  
     /!\ Le restaurant "La note enchantée" a 4 entrées, ce qui implique un petit décallage sur l'animation du plat.   
@@ -28,11 +42,11 @@ Page conçu en mobile first.
 
 * Rajout proriété pointer sur favoris  
 * Animations Loading spinner  
-/!\ Enlever commentaire dans HTML pour visualiser.  
+/!\ Enlever commentaire dans HTML pour visualiser.  (L13 & L26)
 * Animation #menu  - Paramètrable selon Nb Plat & Nb catégories de plat  
 * Renommage des classes -- en _  
-    -ok Menu  
-    -ok index  
+    - ok Menu  
+    - ok index  
 
 ***
 
@@ -44,7 +58,7 @@ Page conçu en mobile first.
 * Bouton valider  
 * Div Card-plat--valider (avec width, à confirmer)  
 * Bouton favoris + ajustement position/dimensions  
-    -le CSS class favoris est passée en section _buttons pour gestion sur accueil + menu  
+    - le CSS class favoris est passée en section _buttons pour gestion sur accueil + menu  
 * hover sur lien footer  
 * Mise en forme README  
 
@@ -63,7 +77,7 @@ Page conçu en mobile first.
 
 * Mise en forme section Fonctionnement  
 * Mise en forme section Liste restaurants  
-    -Ajout favoris + nouveau  
+    - Ajout favoris + nouveau  
 * Ajout icones dans footer  
 * Ajout des mixins flex row/column  
 * Hors animation & hors responsive, page d'accueil complète.  

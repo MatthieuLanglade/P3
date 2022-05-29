@@ -2,36 +2,45 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
-    // Possibilité d'adapter bg-base pour theme sombre, couleur de police à revoir
-$bg-base : #FFFFFF;
+$bg-base : #ffffff; // Possibilité d'adapter bg-base
 $bg-basedr: darken($bg-base,5%);
 $bg-baseddr: darken($bg-base,10%);
 $bg-baseddt: darken($bg-base,50%);
 $bg-basedt: darken($bg-base,80%);
 $font-basedr : darken($bg-base,100%);
-// Display flex 
-$flex-gap : 20px;
+// Display flex
+$flex-gap : 20px; // Par défaut
 // Fonts
 $Shrikhand: 'Shrikhand', sans-serif;
 $Roboto: 'Roboto', sans-serif; 
+$taille-description: 1em;
+$taille-ico: 1.5em;
+$taille-titre: 1.5em;
+$taille-titre-menu: 1.8em;
+$taille-loading: 3em;
 // Fonctionnement
 $padding-fonctionnement: 30px;
 $taille-numerotation: 30px;
 // Cards
 $height-card : 250px;
-$card-shadow: 0.4;
+$card-shadow: 0.4; // Par défaut
 // Menu
+$debordement-menu: 200px;
 $width-valider-plat: 60px;
+$titre-menu: (
+    width : 50px,
+    thick : 4px,
+    color: $colour-tertiary,);
 //Animations
     //Accueil
-$shake-intensity : 3%; // Bouton Nouveau
 $nb-letter: 8; // Loading-spinner - Lettres logo
 $anim-delay : 3s; // Loading-spinner - Delay Fade
+$shake-intensity : 3%; // Bouton Nouveau
     //Menu    
 $nb-categorie-plat: 3;
 $nb-plat: 4;
 $delay-categorie-plat: $nb-plat * 300ms;
-$delay-plat: 300ms;
+$delay-plat: 400ms;
     //Responsive
 $breakpoints: (
     tablette : 760px,

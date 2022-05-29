@@ -3,14 +3,25 @@ header {
     position: relative;
     background-color: $bg-base;
     width: 100%;
+    #accueil-menu {
+        position: relative;
+        background-color: white;
+        z-index: 2;
+    } 
     #retour-accueil {
         position: absolute;
         width: 20%;
         align-items: center;
         padding: 10px;
-        i {            
-            font-size: 1.5em;
+        i {
+            width: auto; 
+            font-size: $taille-ico;
             color: black;
+            transform: rotate(0deg);
+            transition: transform 300ms ease-in-out;
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
     }
     #logo {        

@@ -10,6 +10,10 @@
         margin-bottom: 30px;
     }
     &_list {
+        @include desktop-only {
+            @include flex-row(40px);
+            justify-content: center;
+        }
         article {
             @include flex-row;
             @include card-shadow();
@@ -17,20 +21,22 @@
             border-radius: 25px;
             background-color: $bg-basedr;
             padding: 20px $padding-fonctionnement;
-            margin-bottom: 25px;
-            align-items:center ;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 20px;
             @include not-mobile {
                 width: 300px;
-                left: 50%;
-                transform: translateX(-50%);
+            }
+            @include desktop-only {
+                margin: 0px;
             }
             .numerotation {
-                border-radius: 50%;
                 background-color: $colour-primary;   
                 position:absolute;
-                left: - $taille-numerotation / 2 ;
+                left: - calc($taille-numerotation / 2);
                 height: $taille-numerotation;
                 width: $taille-numerotation;
+                border-radius: 50%;
                 display: flex;
                 p{
                     text-align: center;
@@ -40,7 +46,7 @@
             }
             i {
                 width: 20px;
-                font-size: 1.2em;
+                font-size: $taille-ico;
                 color: $bg-baseddt;
             }
             &:hover {
@@ -146,7 +152,7 @@
     &_favoris {
         width: 10%;
         height: 100%;
-        font-size: 1.3em;
+        font-size: $taille-ico;
     }
     }
 } 

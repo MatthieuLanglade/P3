@@ -8,11 +8,11 @@ h1, h2, h3, p, a, button {
     font-family: $Roboto;
     color: $font-basedr;
     text-decoration: none;    
-    font-size: 1.1em;
+    font-size: $taille-description;
     width: auto;
 }
 h1, h2 {
-    font-size: 1.5em;
+    font-size: $taille-titre;
     width: auto;
 }
 body {
