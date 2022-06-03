@@ -5,7 +5,11 @@ Page conçu en mobile first.
 
 ## Versions 
 
-### V1.1.2 
+### v1.1.3  
+
+* Modification des chemins pour compatibilité sur l'hébergement.  
+
+### v1.1.2 
 
 * Changement de nom sur certaines animations "Aggrandir" pour éviter conflits.  
 
