@@ -94,7 +94,7 @@
     height: $height-card;
     width: 100%;
     &:hover {
-        animation: agrandir 300ms ease-in-out forwards;
+        animation: aggrandir-card 300ms ease-in-out forwards;
         .card-restaurant_nouveau--actif {
             animation: shake 200ms ease-in-out;
             animation-iteration-count: 2;
@@ -156,7 +156,7 @@
     }
     }
 } 
-@keyframes agrandir {
+@keyframes aggrandir-card {
     0% {
         transform: scale(1)
     }

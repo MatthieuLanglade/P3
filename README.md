@@ -5,6 +5,10 @@ Page conçu en mobile first.
 
 ## Versions 
 
+### V1.1.2 
+
+* Changement de nom sur certaines animations "Aggrandir" pour éviter conflits.  
+
 ### v1.1.1
 
 * animation flêche retour arriere menu.  
